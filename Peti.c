@@ -16,24 +16,25 @@ void popuniPseudoSlucajnimBrojevima(float* polje, int n) {
         }
     }
 }
-    int main(){
-        float* polje;
-        int velicinaPolja = 800;
 
-        polje = (float*)malloc(velicinaPolja * sizeof(float));
-        if (polje == NULL) {
-            fprintf(stderr, "Greška pri alokaciji memorije.\n");
-            return 1;
+int main(){
+    float* polje;
+    int velicinaPolja = 800;
+
+    polje = (float*)malloc(velicinaPolja * sizeof(float));
+    if (polje == NULL) {
+        fprintf(stderr, "Greška pri alokaciji memorije.\n");
+        return 1;
         }
 
-        popuniPseudoSlucajnimBrojevima(polje, velicinaPolja);
-        printf("Elementi polja:\n");
-        for (int i = 0; i < velicinaPolja; i++) {
-            printf("%.2f ", polje[i]);
-        }
-        printf("\n");
+    popuniPseudoSlucajnimBrojevima(polje, velicinaPolja);
+    printf("Elementi polja:\n");
+    for (int i = 0; i < velicinaPolja; i++) {
+        printf("%.2f ", polje[i]);
+    }
+    printf("\n");
 
-        free(polje);
+    free(polje);
 
-        return 0;
+    return 0;
     }

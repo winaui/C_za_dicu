@@ -15,7 +15,7 @@ float aritmetickaSredina(int* polje, int n) {
         suma += polje[i];
     }
 
-    return (float)suma / n;
+    return (float)suma / n; //typecast-ano u float jer su i suma i n integeri
 }
 
 void zamijeniElemente(int* polje, int n) {
@@ -23,14 +23,13 @@ void zamijeniElemente(int* polje, int n) {
 
     for (int i = 0; i < n; i++) {
         if (polje[i] < avg) {
-            polje[i] = (int)avg;
+            polje[i] = (int)avg; //typecast-ano u integer jer je polje tipa int, a avg je tipa float
         }
     }
 }
 
 int main() {
     int n;
-
     do {
         printf("Unesite broj elemenata (3 < n <= 16): ");
         scanf("%d", &n);
